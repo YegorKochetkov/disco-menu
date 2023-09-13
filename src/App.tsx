@@ -1,5 +1,4 @@
-import "./App.css";
-import MenuList from "./components/menu_list";
+import MenuList from "./components/menu_list/menu_list";
 
 const menuItems = ["Home", "About", "Contact", "Services", "Blog"];
 
