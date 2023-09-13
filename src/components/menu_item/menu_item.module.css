@@ -1,0 +1,72 @@
+.item {
+  --clr-default: #ffffff33;
+  --clr-fallback: #ffffff;
+  --clr1: #00ade1;
+  --clr2: #ff6493;
+  --clr3: #ffdd1c;
+  --clr4: #00dc82;
+  --clr5: #cd00d4;
+
+  width: fit-content;
+}
+.item a {
+  position: relative;
+  padding-right: 1rem;
+
+  color: var(--clr-default);
+
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 0.25rem;
+
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.item a .color_item {
+  position: absolute;
+
+  width: 0;
+  overflow: hidden;
+
+  /* --clr is set in html inline style attribute */
+  color: var(--clr);
+  border-right: 0.25rem solid var(--clr);
+  filter: drop-shadow(1px 1px 20px var(--clr))
+    drop-shadow(-1px -1px 20px var(--clr));
+
+  transition: 500ms;
+}
+.item a:hover .color_item {
+  width: 100%;
+}
+
+.item a .animation_item span {
+  animation-name: animateText;
+  animation-timing-function: linear;
+  /* --animation-duration is set in html inline style attribute */
+  animation-duration: var(--animation-duration, 300ms);
+  animation-iteration-count: infinite;
+}
+
+ul:hover a .animation_item span {
+  animation-play-state: paused;
+  opacity: 0.3;
+}
+
+@keyframes animateText {
+  0%,
+  20.99% {
+    color: var(--clr-default);
+    filter: drop-shadow(0 0 0 var(--clr));
+  }
+  21%,
+  79.99% {
+    color: var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+  }
+  80%,
+  100% {
+    color: var(--clr-default);
+    filter: drop-shadow(0 0 0 var(--clr));
+  }
+}
