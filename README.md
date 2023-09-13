@@ -1,4 +1,4 @@
-# [Demo](http://github.com)
+# [Demo](https://yegorkochetkov.github.io/disco-menu/)
 
 ## Menu with creative animation and hover effect
 
