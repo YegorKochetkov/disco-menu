@@ -13,7 +13,7 @@ function MenuItem({
         key={index}
         style={
           {
-            "--animation-duration": `${Math.random() * item.length + 2}s`,
+            "--animation-duration": `${Math.random() * item.length + 0.5}s`,
           } as React.CSSProperties
         }
       >
@@ -28,9 +28,9 @@ function MenuItem({
 
   return (
     <li className={classes.item}>
-      <a href='#' data-text={item} style={cssColorVariable}>
-        <span className={classes.color_item}>&nbsp;{formattedItem}</span>
-        <span className={classes.animation_item}>&nbsp;{formattedItem}</span>
+      <a href='#' style={cssColorVariable}>
+        <span className={classes.colored_text}>&nbsp;{formattedItem}</span>
+        <span className={classes.animated_text}>&nbsp;{formattedItem}</span>
       </a>
     </li>
   );

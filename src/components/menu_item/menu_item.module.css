@@ -22,7 +22,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-.item a .color_item {
+.item a .colored_text {
   position: absolute;
 
   width: 0;
@@ -36,11 +36,11 @@
 
   transition: 500ms;
 }
-.item a:hover .color_item {
+.item a:hover .colored_text {
   width: 100%;
 }
 
-.item a .animation_item span {
+.item a .animated_text span {
   animation-name: animateText;
   animation-timing-function: linear;
   /* --animation-duration is set in html inline style attribute */
@@ -48,23 +48,23 @@
   animation-iteration-count: infinite;
 }
 
-ul:hover a .animation_item span {
+ul:hover a .animated_text span {
   animation-play-state: paused;
   opacity: 0.3;
 }
 
 @keyframes animateText {
   0%,
-  20.99% {
+  29.99% {
     color: var(--clr-default);
     filter: drop-shadow(0 0 0 var(--clr));
   }
-  21%,
-  79.99% {
+  30%,
+  69.99% {
     color: var(--clr);
     filter: drop-shadow(0 0 20px var(--clr));
   }
-  80%,
+  70%,
   100% {
     color: var(--clr-default);
     filter: drop-shadow(0 0 0 var(--clr));
